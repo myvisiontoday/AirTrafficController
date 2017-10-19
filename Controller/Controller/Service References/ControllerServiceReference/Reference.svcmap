@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1166e95a-670a-4265-a977-ce7068ea7402" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/ATCServer/IController/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ATCServer.wsdl" MetadataType="Wsdl" ID="f4f9f542-6137-428b-a44b-c27c2362a7c0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ATCServer/IController/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="bd5c9e0c-b333-4dec-b351-326df198d5b0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ATCServer/IController/mex" />
+    <MetadataFile FileName="ATCServer2.xsd" MetadataType="Schema" ID="80a434fa-a27f-4bce-84ea-b1feab98a5e7" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ATCServer/IController/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="bc269dfd-fb1e-400a-8569-217e55a82c97" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ATCServer/IController/mex" />
+    <MetadataFile FileName="ATCServer21.xsd" MetadataType="Schema" ID="ee138fd4-437c-4e30-b6a5-fe139024d64a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ATCServer/IController/mex" />
+    <MetadataFile FileName="System.Collections.Generic.xsd" MetadataType="Schema" ID="3941cd88-bc53-4ee1-b7d3-56a960f55fca" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ATCServer/IController/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="604b461b-1ca1-40ae-b656-32ce9ca6a9f6" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ATCServer/IController/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

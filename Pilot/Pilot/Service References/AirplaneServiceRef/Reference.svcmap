@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dcb87269-4ccc-4a97-889b-9e603b73ad61" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/ATCServer/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="128388bf-46b3-4895-ae70-37451d795441" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ATCServer/?xsd=xsd2" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="804416fe-1f5c-444b-ac94-0ad932118a2b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ATCServer/?xsd=xsd3" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="a1371cce-b695-458d-87de-2f4c92e297a3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ATCServer/?disco" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="4566b058-56c5-4844-b846-f7dbbfa68b68" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ATCServer/?xsd=xsd0" />
+    <MetadataFile FileName="item31.xsd" MetadataType="Schema" ID="90ad7d57-0827-45d9-98fd-d05a1c55599e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ATCServer/?xsd=xsd4" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="0e6322d8-c3a8-4025-9387-02431f07e86c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ATCServer/?xsd=xsd1" />
+    <MetadataFile FileName="item.wsdl" MetadataType="Wsdl" ID="802785d8-5bbf-4c29-b227-11ee167fa308" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ATCServer/?wsdl=wsdl0" />
+    <MetadataFile FileName="ATC_Contract.wsdl" MetadataType="Wsdl" ID="053be269-c7f1-470e-9c62-416fe6cc456a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ATCServer/?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

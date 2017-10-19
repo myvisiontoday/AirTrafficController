@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="ATCServer" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="ATCServer" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="ATCServer/Imports">
+      <xsd:import namespace="ATCServer" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ATCServer" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IController_GetAirportName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAirportName" />
+  </wsdl:message>
+  <wsdl:message name="IController_GetAirportName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAirportNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_GetAirplaneList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAirplaneList" />
+  </wsdl:message>
+  <wsdl:message name="IController_GetAirplaneList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAirplaneListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_GetAirplane_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAirplane" />
+  </wsdl:message>
+  <wsdl:message name="IController_GetAirplane_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAirplaneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_sendTaxiCommand_InputMessage">
+    <wsdl:part name="parameters" element="tns:sendTaxiCommand" />
+  </wsdl:message>
+  <wsdl:message name="IController_sendTaxiCommand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sendTaxiCommandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_ApproveTakeOffRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveTakeOffRequest" />
+  </wsdl:message>
+  <wsdl:message name="IController_ApproveTakeOffRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveTakeOffRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_ApproveLandRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveLandRequest" />
+  </wsdl:message>
+  <wsdl:message name="IController_ApproveLandRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApproveLandRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_AbortInTheServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:AbortInTheServer" />
+  </wsdl:message>
+  <wsdl:message name="IController_AbortInTheServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AbortInTheServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_GetUpdatePosition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdatePosition" />
+  </wsdl:message>
+  <wsdl:message name="IController_GetUpdatePosition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdatePositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_ResetUpdatePosition_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetUpdatePosition" />
+  </wsdl:message>
+  <wsdl:message name="IController_ResetUpdatePosition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetUpdatePositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_SubscribeEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeEvent" />
+  </wsdl:message>
+  <wsdl:message name="IController_SubscribeEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_UnSubscribeEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnSubscribeEvent" />
+  </wsdl:message>
+  <wsdl:message name="IController_UnSubscribeEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnSubscribeEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_UpdateStatusFromController_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStatusFromController" />
+  </wsdl:message>
+  <wsdl:message name="IController_UpdateStatusFromController_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStatusFromControllerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_GetQueue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueue" />
+  </wsdl:message>
+  <wsdl:message name="IController_GetQueue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_LetPilotKnow_InputMessage">
+    <wsdl:part name="parameters" element="tns:LetPilotKnow" />
+  </wsdl:message>
+  <wsdl:message name="IController_LetPilotKnow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LetPilotKnowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_GetStatusDictionaryController_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusDictionaryController" />
+  </wsdl:message>
+  <wsdl:message name="IController_GetStatusDictionaryController_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusDictionaryControllerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_GetCommandDictionary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommandDictionary" />
+  </wsdl:message>
+  <wsdl:message name="IController_GetCommandDictionary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommandDictionaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_getRunway_InputMessage">
+    <wsdl:part name="parameters" element="tns:getRunway" />
+  </wsdl:message>
+  <wsdl:message name="IController_getRunway_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getRunwayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_getCommandList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCommandList" />
+  </wsdl:message>
+  <wsdl:message name="IController_getCommandList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCommandListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_UserInterface_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UserInterface" />
+  </wsdl:message>
+  <wsdl:message name="IController_AddToListMessage_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:AddToListMessage" />
+  </wsdl:message>
+  <wsdl:message name="IController_AbortMessage_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:AbortMessage" />
+  </wsdl:message>
+  <wsdl:message name="IController_RemoveMessage_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RemoveMessage" />
+  </wsdl:message>
+  <wsdl:message name="IController_DockedMessage_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:DockedMessage" />
+  </wsdl:message>
+  <wsdl:message name="IController_RegularUpdate_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RegularUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IController_NewPilotRequest_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:NewPilotRequest" />
+  </wsdl:message>
+  <wsdl:message name="IController_AbortedCommand_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:AbortedCommand" />
+  </wsdl:message>
+  <wsdl:message name="IController_UpdateForLandingProcess_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UpdateForLandingProcess" />
+  </wsdl:message>
+  <wsdl:message name="IController_UpdateForTakingOffProcess_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UpdateForTakingOffProcess" />
+  </wsdl:message>
+  <wsdl:message name="IController_UpdateForTakingOffProcess_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UpdateForTakingOffProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_UpdateForTaxi_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UpdateForTaxi" />
+  </wsdl:message>
+  <wsdl:message name="IController_UpdateForTaxi_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UpdateForTaxiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_SendErrorMessage_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:SendErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IController_SendErrorMessage_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:SendErrorMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_AbortFinished_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:AbortFinished" />
+  </wsdl:message>
+  <wsdl:message name="IController_AbortFinished_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:AbortFinishedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IController_RemoveFromListView_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFromListView" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_Connect_InputMessage">
+    <wsdl:part name="parameters" element="tns:Connect" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_LandRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:LandRequest" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_LandRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LandRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_TakeOffRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:TakeOffRequest" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_TakeOffRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TakeOffRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_CancelRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelRequest" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_CancelRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_UpdatePlane_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlane" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_UpdatePlane_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlaneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_UpdateStatusFromPilot_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStatusFromPilot" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_UpdateStatusFromPilot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStatusFromPilotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_EmergencyRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmergencyRequest" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_EmergencyRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmergencyRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_GetStatusDictionaryPilot_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusDictionaryPilot" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_GetStatusDictionaryPilot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusDictionaryPilotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_reportProgress_InputMessage">
+    <wsdl:part name="parameters" element="tns:reportProgress" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_reportProgress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:reportProgressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_AbortComplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:AbortComplete" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_AbortComplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AbortCompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_Destroy_InputMessage">
+    <wsdl:part name="parameters" element="tns:Destroy" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_RequestConfirm_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RequestConfirm" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_StatusChangedPilot_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:StatusChangedPilot" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_getFlightNr_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:getFlightNr" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_getFlightNr_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:getFlightNrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_canAbort_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:canAbort" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_canAbort_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:canAbortResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_Aborted_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:Aborted" />
+  </wsdl:message>
+  <wsdl:message name="IAirplane_AfterAnimation_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:AfterAnimation" />
+  </wsdl:message>
+  <wsdl:portType name="IController">
+    <wsdl:operation name="GetAirportName">
+      <wsdl:input wsaw:Action="ATCServer/IController/GetAirportName" message="tns:IController_GetAirportName_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/GetAirportNameResponse" message="tns:IController_GetAirportName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAirplaneList">
+      <wsdl:input wsaw:Action="ATCServer/IController/GetAirplaneList" message="tns:IController_GetAirplaneList_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/GetAirplaneListResponse" message="tns:IController_GetAirplaneList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAirplane">
+      <wsdl:input wsaw:Action="ATCServer/IController/GetAirplane" message="tns:IController_GetAirplane_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/GetAirplaneResponse" message="tns:IController_GetAirplane_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sendTaxiCommand">
+      <wsdl:input wsaw:Action="ATCServer/IController/sendTaxiCommand" message="tns:IController_sendTaxiCommand_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/sendTaxiCommandResponse" message="tns:IController_sendTaxiCommand_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApproveTakeOffRequest">
+      <wsdl:input wsaw:Action="ATCServer/IController/ApproveTakeOffRequest" message="tns:IController_ApproveTakeOffRequest_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/ApproveTakeOffRequestResponse" message="tns:IController_ApproveTakeOffRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApproveLandRequest">
+      <wsdl:input wsaw:Action="ATCServer/IController/ApproveLandRequest" message="tns:IController_ApproveLandRequest_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/ApproveLandRequestResponse" message="tns:IController_ApproveLandRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AbortInTheServer">
+      <wsdl:input wsaw:Action="ATCServer/IController/AbortInTheServer" message="tns:IController_AbortInTheServer_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/AbortInTheServerResponse" message="tns:IController_AbortInTheServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdatePosition">
+      <wsdl:input wsaw:Action="ATCServer/IController/GetUpdatePosition" message="tns:IController_GetUpdatePosition_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/GetUpdatePositionResponse" message="tns:IController_GetUpdatePosition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetUpdatePosition">
+      <wsdl:input wsaw:Action="ATCServer/IController/ResetUpdatePosition" message="tns:IController_ResetUpdatePosition_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/ResetUpdatePositionResponse" message="tns:IController_ResetUpdatePosition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubscribeEvent">
+      <wsdl:input wsaw:Action="ATCServer/IController/SubscribeEvent" message="tns:IController_SubscribeEvent_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/SubscribeEventResponse" message="tns:IController_SubscribeEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnSubscribeEvent">
+      <wsdl:input wsaw:Action="ATCServer/IController/UnSubscribeEvent" message="tns:IController_UnSubscribeEvent_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/UnSubscribeEventResponse" message="tns:IController_UnSubscribeEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStatusFromController">
+      <wsdl:input wsaw:Action="ATCServer/IController/UpdateStatusFromController" message="tns:IController_UpdateStatusFromController_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/UpdateStatusFromControllerResponse" message="tns:IController_UpdateStatusFromController_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQueue">
+      <wsdl:input wsaw:Action="ATCServer/IController/GetQueue" message="tns:IController_GetQueue_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/GetQueueResponse" message="tns:IController_GetQueue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LetPilotKnow">
+      <wsdl:input wsaw:Action="ATCServer/IController/LetPilotKnow" message="tns:IController_LetPilotKnow_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/LetPilotKnowResponse" message="tns:IController_LetPilotKnow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusDictionaryController">
+      <wsdl:input wsaw:Action="ATCServer/IController/GetStatusDictionaryController" message="tns:IController_GetStatusDictionaryController_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/GetStatusDictionaryControllerResponse" message="tns:IController_GetStatusDictionaryController_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommandDictionary">
+      <wsdl:input wsaw:Action="ATCServer/IController/GetCommandDictionary" message="tns:IController_GetCommandDictionary_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/GetCommandDictionaryResponse" message="tns:IController_GetCommandDictionary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getRunway">
+      <wsdl:input wsaw:Action="ATCServer/IController/getRunway" message="tns:IController_getRunway_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/getRunwayResponse" message="tns:IController_getRunway_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCommandList">
+      <wsdl:input wsaw:Action="ATCServer/IController/getCommandList" message="tns:IController_getCommandList_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IController/getCommandListResponse" message="tns:IController_getCommandList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserInterface">
+      <wsdl:output wsaw:Action="ATCServer/IController/UserInterface" message="tns:IController_UserInterface_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddToListMessage">
+      <wsdl:output wsaw:Action="ATCServer/IController/AddToListMessage" message="tns:IController_AddToListMessage_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AbortMessage">
+      <wsdl:output wsaw:Action="ATCServer/IController/AbortMessage" message="tns:IController_AbortMessage_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveMessage">
+      <wsdl:output wsaw:Action="ATCServer/IController/RemoveMessage" message="tns:IController_RemoveMessage_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DockedMessage">
+      <wsdl:output wsaw:Action="ATCServer/IController/DockedMessage" message="tns:IController_DockedMessage_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegularUpdate">
+      <wsdl:output wsaw:Action="ATCServer/IController/RegularUpdate" message="tns:IController_RegularUpdate_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewPilotRequest">
+      <wsdl:output wsaw:Action="ATCServer/IController/NewPilotRequest" message="tns:IController_NewPilotRequest_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AbortedCommand">
+      <wsdl:output wsaw:Action="ATCServer/IController/AbortedCommand" message="tns:IController_AbortedCommand_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateForLandingProcess">
+      <wsdl:output wsaw:Action="ATCServer/IController/UpdateForLandingProcess" message="tns:IController_UpdateForLandingProcess_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateForTakingOffProcess">
+      <wsdl:output wsaw:Action="ATCServer/IController/UpdateForTakingOffProcess" message="tns:IController_UpdateForTakingOffProcess_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="ATCServer/IController/UpdateForTakingOffProcessResponse" message="tns:IController_UpdateForTakingOffProcess_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateForTaxi">
+      <wsdl:output wsaw:Action="ATCServer/IController/UpdateForTaxi" message="tns:IController_UpdateForTaxi_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="ATCServer/IController/UpdateForTaxiResponse" message="tns:IController_UpdateForTaxi_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendErrorMessage">
+      <wsdl:output wsaw:Action="ATCServer/IController/SendErrorMessage" message="tns:IController_SendErrorMessage_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="ATCServer/IController/SendErrorMessageResponse" message="tns:IController_SendErrorMessage_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AbortFinished">
+      <wsdl:output wsaw:Action="ATCServer/IController/AbortFinished" message="tns:IController_AbortFinished_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="ATCServer/IController/AbortFinishedResponse" message="tns:IController_AbortFinished_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFromListView">
+      <wsdl:output wsaw:Action="ATCServer/IController/RemoveFromListView" message="tns:IController_RemoveFromListView_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IAirplane">
+    <wsdl:operation name="Connect">
+      <wsdl:input wsaw:Action="ATCServer/IAirplane/Connect" message="tns:IAirplane_Connect_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LandRequest">
+      <wsdl:input wsaw:Action="ATCServer/IAirplane/LandRequest" message="tns:IAirplane_LandRequest_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IAirplane/LandRequestResponse" message="tns:IAirplane_LandRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TakeOffRequest">
+      <wsdl:input wsaw:Action="ATCServer/IAirplane/TakeOffRequest" message="tns:IAirplane_TakeOffRequest_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IAirplane/TakeOffRequestResponse" message="tns:IAirplane_TakeOffRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelRequest">
+      <wsdl:input wsaw:Action="ATCServer/IAirplane/CancelRequest" message="tns:IAirplane_CancelRequest_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IAirplane/CancelRequestResponse" message="tns:IAirplane_CancelRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlane">
+      <wsdl:input wsaw:Action="ATCServer/IAirplane/UpdatePlane" message="tns:IAirplane_UpdatePlane_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IAirplane/UpdatePlaneResponse" message="tns:IAirplane_UpdatePlane_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStatusFromPilot">
+      <wsdl:input wsaw:Action="ATCServer/IAirplane/UpdateStatusFromPilot" message="tns:IAirplane_UpdateStatusFromPilot_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IAirplane/UpdateStatusFromPilotResponse" message="tns:IAirplane_UpdateStatusFromPilot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmergencyRequest">
+      <wsdl:input wsaw:Action="ATCServer/IAirplane/EmergencyRequest" message="tns:IAirplane_EmergencyRequest_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IAirplane/EmergencyRequestResponse" message="tns:IAirplane_EmergencyRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusDictionaryPilot">
+      <wsdl:input wsaw:Action="ATCServer/IAirplane/GetStatusDictionaryPilot" message="tns:IAirplane_GetStatusDictionaryPilot_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IAirplane/GetStatusDictionaryPilotResponse" message="tns:IAirplane_GetStatusDictionaryPilot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="reportProgress">
+      <wsdl:input wsaw:Action="ATCServer/IAirplane/reportProgress" message="tns:IAirplane_reportProgress_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IAirplane/reportProgressResponse" message="tns:IAirplane_reportProgress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AbortComplete">
+      <wsdl:input wsaw:Action="ATCServer/IAirplane/AbortComplete" message="tns:IAirplane_AbortComplete_InputMessage" />
+      <wsdl:output wsaw:Action="ATCServer/IAirplane/AbortCompleteResponse" message="tns:IAirplane_AbortComplete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Destroy">
+      <wsdl:input wsaw:Action="ATCServer/IAirplane/Destroy" message="tns:IAirplane_Destroy_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestConfirm">
+      <wsdl:output wsaw:Action="ATCServer/IAirplane/RequestConfirm" message="tns:IAirplane_RequestConfirm_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StatusChangedPilot">
+      <wsdl:output wsaw:Action="ATCServer/IAirplane/StatusChangedPilot" message="tns:IAirplane_StatusChangedPilot_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFlightNr">
+      <wsdl:output wsaw:Action="ATCServer/IAirplane/getFlightNr" message="tns:IAirplane_getFlightNr_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="ATCServer/IAirplane/getFlightNrResponse" message="tns:IAirplane_getFlightNr_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="canAbort">
+      <wsdl:output wsaw:Action="ATCServer/IAirplane/canAbort" message="tns:IAirplane_canAbort_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="ATCServer/IAirplane/canAbortResponse" message="tns:IAirplane_canAbort_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Aborted">
+      <wsdl:output wsaw:Action="ATCServer/IAirplane/Aborted" message="tns:IAirplane_Aborted_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AfterAnimation">
+      <wsdl:output wsaw:Action="ATCServer/IAirplane/AfterAnimation" message="tns:IAirplane_AfterAnimation_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
